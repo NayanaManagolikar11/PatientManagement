@@ -5,11 +5,11 @@ namespace PatientManagement.Api.Services
 {
     public class PatientService(IPatientRepository patientRepository) : IPatientService
     {
-        public Patient? GetPatientById(int patientId)
+        public Patient? GetPatientById(int id)
         {
-            if (patientId <= 0) return null;
+            if (id <= 0) return null;
 
-            return patientRepository.GetPatientById(patientId);
+            return patientRepository.GetPatientById(id);
         }
     }
 }

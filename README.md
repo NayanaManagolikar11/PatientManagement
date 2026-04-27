@@ -5,7 +5,7 @@ This solution contains a .NET Minimal API project for managing patient data.
 This is a simple .NET Minimal API that retrieves patient summary by ID using an in-memory data source.
 
 Endpoint
-GET /api/patients/{patientId}
+GET /api/patients/{id}
 
 Retrieves a patient by ID.
 

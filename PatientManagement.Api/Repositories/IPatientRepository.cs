@@ -4,6 +4,6 @@ namespace PatientManagement.Api.Repositories
 {
     public interface IPatientRepository
     {
-        Patient? GetPatientById(int PatientId);
+        Patient? GetPatientById(int id);
     }
 }

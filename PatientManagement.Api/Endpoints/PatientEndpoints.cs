@@ -20,7 +20,7 @@ namespace PatientManagement.Api.EndPoints
                 .MapGroup("/patients")
                 .WithTags("Patients");
 
-            patientGroup.MapGet("{patientId:int}", GetPatientById)
+            patientGroup.MapGet("{id:int}", GetPatientById)
                 .Produces<Patient>(StatusCodes.Status200OK)
                 .ProducesProblem(StatusCodes.Status404NotFound)
                 .WithName("GetPatientById");
@@ -28,9 +28,9 @@ namespace PatientManagement.Api.EndPoints
             return group;
         }
 
-        private static Results<Ok<Patient>, ProblemHttpResult> GetPatientById(IPatientService service, int patientId)
+        private static Results<Ok<Patient>, ProblemHttpResult> GetPatientById(IPatientService service, int id)
         {
-            var patient = service.GetPatientById(patientId);
+            var patient = service.GetPatientById(id);
 
             return patient is not null
                 ? TypedResults.Ok(patient)

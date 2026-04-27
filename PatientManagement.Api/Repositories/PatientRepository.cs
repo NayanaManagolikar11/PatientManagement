@@ -40,9 +40,9 @@ namespace PatientManagement.Api.Repositories
             },
         ];
 
-        public Patient? GetPatientById(int PatientId)
+        public Patient? GetPatientById(int id)
         {
-            return _patients.FirstOrDefault(p =>  p.Id == PatientId);
+            return _patients.FirstOrDefault(p =>  p.Id == id);
         }
     }
 }

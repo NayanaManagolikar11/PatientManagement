@@ -6,6 +6,6 @@ namespace PatientManagement.Api.Services
     {
         // using synchronous as we are using in memory database
         // In real world scenario (with database, EF core), it should be Task<Patient?> 
-        Patient? GetPatientById(int patientId);
+        Patient? GetPatientById(int id);
     }
 }
